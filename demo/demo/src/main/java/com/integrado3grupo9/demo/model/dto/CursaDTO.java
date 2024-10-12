@@ -3,6 +3,7 @@ package com.integrado3grupo9.demo.model.dto;
 import lombok.Getter;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -10,10 +11,10 @@ public class CursaDTO {
 
     private String nombreCarrera;
     private String nombreEstudiante;
-    private Date fechaInscripcion;
+    private LocalDate fechaInscripcion;
     private Long antiguedad;
 
-    public CursaDTO(String nombreCarrera, String nombreEstudiante, Date fechaInscripcion, Number anticudad) {
+    public CursaDTO(String nombreCarrera, String nombreEstudiante, LocalDate fechaInscripcion, Number anticudad) {
         this.nombreCarrera = nombreCarrera;
         this.nombreEstudiante = nombreEstudiante;
         this.fechaInscripcion = fechaInscripcion;

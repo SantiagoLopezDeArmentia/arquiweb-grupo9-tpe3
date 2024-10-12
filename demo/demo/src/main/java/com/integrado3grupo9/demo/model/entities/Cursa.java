@@ -3,6 +3,7 @@ package com.integrado3grupo9.demo.model.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -25,14 +26,14 @@ public class Cursa {
     private int antiguedad;
 
     @Column(name = "fecha_inicio")
-    private Date fechaInicio;
+    private LocalDate fechaInicio;
 
     @Column (name = "fecha_fin")
-    private Date fechaFin;
+    private LocalDate fechaFin;
 
     public Cursa() { super(); }
 
-    public Cursa(CursaId id, Estudiante estudiante, Carrera carrera, int antiguedad, Date fechaInicio) {
+    public Cursa(CursaId id, Estudiante estudiante, Carrera carrera, int antiguedad, LocalDate fechaInicio) {
         super();
         this.id = id;
         this.estudiante = estudiante;

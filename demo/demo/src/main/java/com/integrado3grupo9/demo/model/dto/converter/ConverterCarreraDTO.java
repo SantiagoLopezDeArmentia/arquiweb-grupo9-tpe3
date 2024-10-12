@@ -2,7 +2,9 @@ package com.integrado3grupo9.demo.model.dto.converter;
 
 import com.integrado3grupo9.demo.model.entities.Carrera;
 import com.integrado3grupo9.demo.model.dto.CarreraDTO;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ConverterCarreraDTO extends ConverterDTO<Carrera, CarreraDTO> {
     public Carrera fromDTO(CarreraDTO d) {
         if(d == null)

@@ -1,9 +1,15 @@
 package com.integrado3grupo9.demo.model.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CarreraInscriptosDTO {
+@Getter
+@Setter
+public class CarreraInscriptosDTO implements Serializable {
     private String nombre;
     private Long cantInscriptos;
     private List<EstudianteDTO> estudiantes;

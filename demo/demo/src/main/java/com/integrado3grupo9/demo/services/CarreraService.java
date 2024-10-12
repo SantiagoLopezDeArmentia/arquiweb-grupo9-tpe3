@@ -1,5 +1,7 @@
 package com.integrado3grupo9.demo.services;
 
+import com.integrado3grupo9.demo.model.dto.CarreraInscriptosDTO;
+import com.integrado3grupo9.demo.model.dto.ReporteDTO;
 import com.integrado3grupo9.demo.model.entities.Carrera;
 import org.springframework.stereotype.Service;
 import com.integrado3grupo9.demo.repository.CarreraRepository;
@@ -38,6 +40,20 @@ public class CarreraService {
 
     public void delete(Long carreraId) {
         this.carreraRepository.deleteById(carreraId);
+    }
+
+    /* Resuelve el ejercicio F */
+    public List<CarreraInscriptosDTO> findAllByEstudiantesInscriptosOrderByCantidad() {
+        List<CarreraInscriptosDTO> carreras =  this.carreraRepository.findAllByEstudiantesInscriptosOrderByCantidad();
+        if(!carreras.isEmpty()) {
+            return carreras;
+        }
+        return null;
+    }
+
+    /* Resuelve el servicio H */
+    public List<ReporteDTO> generarReporte() {
+        return this.carreraRepository.generarReporte();
     }
 
 }
