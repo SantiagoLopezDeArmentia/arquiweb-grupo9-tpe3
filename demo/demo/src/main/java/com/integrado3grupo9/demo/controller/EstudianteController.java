@@ -24,35 +24,6 @@ public class EstudianteController {
         this.converter = converter;
     }
 
-    /*
-    @GetMapping
-    public ResponseEntity<List<EstudianteDTO>> findAll() {
-        List<Estudiante> estudiantes = estudianteService.findAll();
-        if(!estudiantes.isEmpty())
-            return new ResponseEntity<>(this.converter.fromEntity(estudiantes), HttpStatus.OK);
-
-        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-    }
-
-    @GetMapping("/") //?order=desc&field=nro_libreta
-    public ResponseEntity<List<EstudianteDTO>> findAllOrderBy(@RequestParam String order, @RequestParam String field) {
-        try {
-            List<Estudiante> estudiantes = estudianteService.findAllOrderBy(order, field);
-            return new ResponseEntity<>(this.converter.fromEntity(estudiantes), HttpStatus.OK);
-        } catch(Exception e) {;
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        }
-    }
-
-    @GetMapping() //genero=m
-    public ResponseEntity<List<EstudianteDTO>> findAllByGenero(@RequestParam(required = false) String genero) {
-        List<Estudiante> estudiantes = this.estudianteService.findAllByGenero(genero);
-        if(!estudiantes.isEmpty())
-            return new ResponseEntity<>(this.converter.fromEntity(estudiantes), HttpStatus.OK);
-
-        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-    }*/
-
     @GetMapping
     public ResponseEntity<List<EstudianteDTO>> findAll(@RequestParam(required = false) String genero,
                                                        @RequestParam(required = false) String order,
