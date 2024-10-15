@@ -2,12 +2,14 @@ package com.integrado3grupo9.demo.model.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
 @Getter
+@Setter
 public class Cursa {
     @EmbeddedId
     private CursaId id;

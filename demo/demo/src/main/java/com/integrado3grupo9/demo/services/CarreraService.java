@@ -29,7 +29,7 @@ public class CarreraService {
         return this.carreraRepository.findById(id).orElse(null);
     }
 
-    public Carrera update(Long carreraId, Carrera carrera) {
+    public Carrera updateById(Long carreraId, Carrera carrera) {
         Carrera tmp = this.carreraRepository.findById(carreraId).orElse(null);
         if (tmp != null) {
             tmp.setNombreCarrera(carrera.getNombreCarrera());
@@ -38,7 +38,7 @@ public class CarreraService {
         return tmp;
     }
 
-    public void delete(Long carreraId) {
+    public void deleteById(Long carreraId) {
         this.carreraRepository.deleteById(carreraId);
     }
 
