@@ -38,8 +38,9 @@ public class CarreraService {
         return tmp;
     }
 
-    public void deleteById(Long carreraId) {
+    public Boolean deleteById(Long carreraId) {
         this.carreraRepository.deleteById(carreraId);
+        return !this.carreraRepository.existsById(carreraId);
     }
 
     /* Resuelve el ejercicio F */
